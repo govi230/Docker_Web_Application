@@ -11,7 +11,7 @@ function dockerOutput() {
         var cmd = "sudo docker" + " " + document.getElementById("cmds").value + " " + document.getElementById("Options").value
     }
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://192.168.104.53/cgi-bin/docker?x=" + cmd, true);
+    xhr.open("GET", "http://192.168.104.53/cgi-bin/docker.py?x=" + cmd, true);
     document.getElementById("OutputWindow").innerHTML = '<div class="loader"></div>';
     xhr.send()
     xhr.onload = function () {
